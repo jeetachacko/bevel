@@ -478,3 +478,151 @@ TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/config
 ok: [localhost]
 
 TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for ssh] ***
+changed: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for https] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "---------------GIT PUSH---------------",
+        "Updating 39a35747..6b94f07e",
+        "Fast-forward",
+        " .../releases/dev/flux-local/gotk-components.yaml   | 5566 ++++++++++++++++++++",
+        " .../releases/dev/flux-local/gotk-sync.yaml         |   27 +",
+        " .../releases/dev/flux-local/kustomization.yaml     |    5 +",
+        " 3 files changed, 5598 insertions(+)",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/flux-local/gotk-components.yaml",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/flux-local/gotk-sync.yaml",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/flux-local/kustomization.yaml",
+        "Unstaged changes after reset:",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/templates/mini_sc.tpl",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/vars/main.yaml",
+        "[main 0b18e671] [ci skip] Pushing deployment files for namespace, service accounts and clusterrolebinding",
+        " 5 files changed, 510 insertions(+)",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/supplychain/orderer/namespace.yaml",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/supplychain/orderer/reviewer_rbac.yaml",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/supplychain/orderer/vault-reviewer.yaml",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/supplychain/orderer/vaultAuth.yaml"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "fatal: not in a git directory",
+        "fatal: not in a git directory",
+        "Warning: Permanently added the ECDSA host key for IP address '140.82.121.3' to the list of known hosts.\r",
+        "From github.com:jeetachacko/bevel",
+        "   3cfdcaa3..6b94f07e  main       -> origin/main",
+        "remote: Resolving deltas:   0% (0/3)        \rremote: Resolving deltas:  33% (1/3)        \rremote: Resolving deltas:  66% (2/3)        \rremote: Resolving deltas: 100% (3/3)        \rremote: Resolving deltas: 100% (3/3), completed with 3 local objects.        ",
+        "To ssh://github.com/jeetachacko/bevel.git",
+        "   6b94f07e..0b18e671  HEAD -> main"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for gitpush] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for git_push] ***
+skipping: [localhost]
+
+TASK [Checking for the supplychain-net-role-tokenreview-binding] ***************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ClusterRoleBinding supplychain-net-role-tokenreview-binding is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ClusterRoleBinding supplychain-net-role-tokenreview-binding] ***
+FAILED - RETRYING: [localhost]: Wait for ClusterRoleBinding supplychain-net-role-tokenreview-binding (50 retries left).
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ClusterRoleBinding supplychain-net-role-tokenreview-binding is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ClusterRoleBinding supplychain-net-role-tokenreview-binding] ***
+skipping: [localhost]
+
+TASK [Including the check for ServiceAccount vault-reviewer in supplychain-net] ***
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ServiceAccount vault-reviewer is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ServiceAccount vault-reviewer] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ServiceAccount vault-reviewer is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ServiceAccount vault-reviewer] ***
+ok: [localhost]
+
+TASK [Including the check for ServiceAccount vault-auth in supplychain-net] ****
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ServiceAccount vault-auth is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ServiceAccount vault-auth] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check ServiceAccount vault-auth is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for ServiceAccount vault-auth] ***
+ok: [localhost]
+
+TASK [Checking if the namespace manufacturer-net already exists] ***************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check Namespace manufacturer-net is created] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for Namespace manufacturer-net] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check Namespace manufacturer-net is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for Namespace manufacturer-net] ***
+skipping: [localhost]
+
+TASK [create/namespace_vaultauth : Set Variable] *******************************
+ok: [localhost]
+
+TASK [Create namespaces] *******************************************************
+
+TASK [k8_component : Ensures peer dir exists] **********************************
+changed: [localhost]
+
+TASK [k8_component : create namespace file for peer] ***************************
+changed: [localhost]
+
+TASK [Create vault reviewer service account for Organizations] *****************
+
+TASK [k8_component : Ensures peer dir exists] **********************************
+ok: [localhost]
+
+TASK [k8_component : create vault-reviewer file for peer] **********************
+changed: [localhost]
+
+TASK [Create vault auth service account for Organizations] *********************
+
+TASK [k8_component : Ensures peer dir exists] **********************************
+ok: [localhost]
+
+TASK [k8_component : create vaultAuth file for peer] ***************************
+changed: [localhost]
+
+TASK [Create clusterrolebinding for Ordrers] ***********************************
+
+TASK [k8_component : Ensures peer dir exists] **********************************
+ok: [localhost]
+
+TASK [k8_component : create reviewer_rbac file for peer] ***********************
+changed: [localhost]
+
+TASK [Git Push] ****************************************************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Check if directory: /home/bevel/platforms/hyperledger-fabric/configuration/../../../ exists] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for ssh] ***
