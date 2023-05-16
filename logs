@@ -1480,3 +1480,221 @@ TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/config
 ok: [localhost]
 
 TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for ssh] ***
+changed: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for https] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "---------------GIT PUSH---------------",
+        "Already up to date.",
+        "Unstaged changes after reset:",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/templates/mini_sc.tpl",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/vars/main.yaml",
+        "[main c0c00f20] [ci skip] Pushing vault_kubernetes files",
+        " 1 file changed, 267 insertions(+)"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "fatal: not in a git directory",
+        "fatal: not in a git directory",
+        "From github.com:jeetachacko/bevel",
+        "   fd76e91a..3dbe05eb  main       -> origin/main",
+        "remote: Resolving deltas:   0% (0/2)        \rremote: Resolving deltas:  50% (1/2)        \rremote: Resolving deltas: 100% (2/2)        \rremote: Resolving deltas: 100% (2/2), completed with 2 local objects.        ",
+        "To ssh://github.com/jeetachacko/bevel.git",
+        "   3dbe05eb..c0c00f20  HEAD -> main"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for gitpush] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for git_push] ***
+skipping: [localhost]
+
+TASK [Check if vault_kubernetes job is completed] ******************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/helm_component : Wait for Job carrier-vaultkubenertes-job in carrier-net] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/helm_component : Check for {{ job_title }} job on {{ component_name }}] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/helm_component : Wait for Job carrier-vaultkubenertes-job in carrier-net] ***
+skipping: [localhost]
+
+TASK [Delete vault token secret] ***********************************************
+
+TASK [delete/k8s_secrets : Delete vault roottoken] *****************************
+changed: [localhost]
+
+TASK [Create storageclass for each organization] *******************************
+
+TASK [Checking if the storage class supplychainsc already exists] **************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass supplychainsc is created] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass supplychainsc] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass supplychainsc is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass supplychainsc] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Set Variable] **************************************
+ok: [localhost]
+
+TASK [creating /home/bevel/platforms/hyperledger-fabric/configuration/../../../platforms/hyperledger-fabric/releases/dev/supplychain/orderer directory] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for orderers] ******
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for Organizations] ***
+skipping: [localhost]
+
+TASK [Git Push] ****************************************************************
+skipping: [localhost]
+
+TASK [Waiting for the creation of supplychainsc storage class] *****************
+skipping: [localhost]
+
+TASK [Checking if the storage class manufacturersc already exists] *************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass manufacturersc is created] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass manufacturersc] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass manufacturersc is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass manufacturersc] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Set Variable] **************************************
+ok: [localhost]
+
+TASK [creating /home/bevel/platforms/hyperledger-fabric/configuration/../../../platforms/hyperledger-fabric/releases/dev/manufacturer/peer directory] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for orderers] ******
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for Organizations] ***
+skipping: [localhost]
+
+TASK [Git Push] ****************************************************************
+skipping: [localhost]
+
+TASK [Waiting for the creation of manufacturersc storage class] ****************
+skipping: [localhost]
+
+TASK [Checking if the storage class carriersc already exists] ******************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass carriersc is created] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass carriersc] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Check StorageClass carriersc is created] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/k8_component : Wait for StorageClass carriersc] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Set Variable] **************************************
+ok: [localhost]
+
+TASK [creating /home/bevel/platforms/hyperledger-fabric/configuration/../../../platforms/hyperledger-fabric/releases/dev/carrier/peer directory] ***
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for orderers] ******
+skipping: [localhost]
+
+TASK [create/storageclass : Create Storage Class value file for Organizations] ***
+skipping: [localhost]
+
+TASK [Git Push] ****************************************************************
+skipping: [localhost]
+
+TASK [Waiting for the creation of carriersc storage class] *********************
+skipping: [localhost]
+
+TASK [Create CA server for each organization] **********************************
+
+TASK [creating the directory ./build/crypto-config/ordererOrganizations/supplychain-net/ca] ***
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/directory : check if dir exists or not] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/directory : Ensures dir exists] ***
+changed: [localhost]
+
+TASK [Check if CA key already exists in vault.] ********************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : Check if Kubernetes-auth already created for Organization] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : Check if policy exists] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : Check docker cred exists] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : Check git https cred exists] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : Wait for certs to be created.] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/setup : check if certs exists in vault.] ***
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": "vault kv get -field=supplychain-net-CA.key secretsv2/crypto/ordererOrganizations/supplychain-net/ca\n", "delta": "0:00:00.112234", "end": "2023-05-16 21:49:32.808526", "msg": "non-zero return code", "rc": 2, "start": "2023-05-16 21:49:32.696292", "stderr": "Error making API request.\n\nURL: GET http://127.0.0.1:8200/v1/sys/internal/ui/mounts/secretsv2/crypto/ordererOrganizations/supplychain-net/ca\nCode: 403. Errors:\n\n* permission denied", "stderr_lines": ["Error making API request.", "", "URL: GET http://127.0.0.1:8200/v1/sys/internal/ui/mounts/secretsv2/crypto/ordererOrganizations/supplychain-net/ca", "Code: 403. Errors:", "", "* permission denied"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [Create value file for cacerts job] ***************************************
+
+TASK [helm_component : Ensures /home/bevel/platforms/hyperledger-fabric/configuration/../../../platforms/hyperledger-fabric/releases/dev/supplychain/supplychain dir exists] ***
+ok: [localhost]
+
+TASK [helm_component : create value file for supplychain-cacerts-job] **********
+ok: [localhost]
+
+TASK [Helm lint] ***************************************************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/helm_lint : Check if value file exists] ***
+ok: [localhost]
+
+TASK [Check or create test directory] ******************************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/directory : check if dir exists or not] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/directory : Ensures dir exists] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/helm_lint : Load file into memory] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/helm_lint : Create value file] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/helm_lint : Run helm lint] ***
+changed: [localhost]
+
+TASK [Git Push] ****************************************************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Check if directory: /home/bevel/platforms/hyperledger-fabric/configuration/../../../ exists] ***
+ok: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for ssh] ***
