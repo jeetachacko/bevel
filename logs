@@ -1881,3 +1881,63 @@ TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/config
 ok: [localhost]
 
 TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for ssh] ***
+changed: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : Execute git push for https] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "---------------GIT PUSH---------------",
+        "Already up to date.",
+        "Unstaged changes after reset:",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/templates/mini_sc.tpl",
+        "M\tplatforms/hyperledger-fabric/configuration/roles/create/storageclass/vars/main.yaml",
+        "[main 1d7f7ce1] [ci skip] Pushing CA server files",
+        " 2 files changed, 158 insertions(+)",
+        " create mode 100644 platforms/hyperledger-fabric/releases/dev/supplychain/supplychain/supplychain-cacerts-job.yaml"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for SSH gitpush] ***
+ok: [localhost] => {
+    "msg": [
+        "fatal: not in a git directory",
+        "fatal: not in a git directory",
+        "From github.com:jeetachacko/bevel",
+        "   27749b87..0615ee4e  main       -> origin/main",
+        "remote: Resolving deltas:   0% (0/5)        \rremote: Resolving deltas:  20% (1/5)        \rremote: Resolving deltas:  40% (2/5)        \rremote: Resolving deltas:  60% (3/5)        \rremote: Resolving deltas:  80% (4/5)        \rremote: Resolving deltas: 100% (5/5)        \rremote: Resolving deltas: 100% (5/5), completed with 5 local objects.        ",
+        "To ssh://github.com/jeetachacko/bevel.git",
+        "   0615ee4e..1d7f7ce1  HEAD -> main"
+    ]
+}
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stdout for gitpush] ***
+skipping: [localhost]
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/git_push : stderr for git_push] ***
+skipping: [localhost]
+
+TASK [Check if cacerts-job job is completed] ***********************************
+
+TASK [/home/bevel/platforms/hyperledger-fabric/configuration/../../shared/configuration/roles/check/helm_component : Wait for Job supplychain-cacerts-job in supplychain-net] ***
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (50 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (49 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (48 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (47 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (46 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (45 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (44 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (43 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (42 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (41 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (40 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (39 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (38 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (37 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (36 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (35 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (34 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (33 retries left).
+FAILED - RETRYING: [localhost]: Wait for Job supplychain-cacerts-job in supplychain-net (32 retries left).
